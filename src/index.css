@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap');
+
+@theme {
+  --font-sans: "Inter", "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif TC", serif;
+
+  --color-moss: #4A5D4E;
+  --color-ink: #2D2D2D;
+  --color-cream: #F5F2ED;
+  --color-paper: #FAF9F6;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-md border border-white/20;
+}
+
+.btn-primary {
+  @apply bg-moss text-white px-8 py-4 rounded-full transition-all duration-300 hover:bg-ink hover:shadow-lg active:scale-95;
+}
+
+.btn-outline {
+  @apply border border-moss text-moss px-8 py-4 rounded-full transition-all duration-300 hover:bg-moss hover:text-white active:scale-95;
+}
+
+.section-padding {
+  @apply py-24 px-6 md:px-12 lg:px-24;
+}
